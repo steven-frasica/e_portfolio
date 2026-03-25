@@ -1,0 +1,44 @@
+// template_r5c0nx8
+// service_36n6sfu
+// 7uQ8_6WPmSsdFxbVz
+
+function contact() {
+  event.preventDefault();
+  const loading = document.querySelector(".modal__overlay--loading");
+  const success = document.querySelector(".modal__overlay--success");
+    loading.classList += " modal__overlay--visible";
+  console.log("it worked");
+  emailjs
+    .sendForm(
+      "service_36n6sfu",
+      "template_r5c0nx8",
+      event.target,
+      "7uQ8_6WPmSsdFxbVz",
+    )
+    .then(() => {
+      loading.classList.remove("modal__overlay--visible");
+      success.classList += " modal__overlay--visible";
+    })
+    .catch(() => {
+      loading.classList.remove("modal__overlay--visible");
+      alert(
+        "The email service is temporarily unavailable. Please contact me directly at steven.frasica@gmail.com in the meantime.",
+      );
+    });
+
+
+  setTimeout(() => {
+  }, 1000);
+}
+
+let isModalOpen = false;
+function toggleModal() {
+  // toggle modal
+  if (isModalOpen) {
+    isModalOpen = false;
+    return document.body.classList.remove("modal--open")
+  }
+  isModalOpen = true;
+  document.body.classList += " modal--open"
+}
+
