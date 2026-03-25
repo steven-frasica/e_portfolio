@@ -55,11 +55,13 @@ label {
   font-weight: bold;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
   border-color: #dcdfe6;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
   border-color: #0979c4;
 }
 
@@ -76,6 +78,13 @@ input:focus, textarea:focus {
 }
 
 .title {
+  font-size: 100px;
+  margin-bottom: 12px;
+  text-align: left;
+  line-height: 1;
+}
+
+.title--name {
   font-size: 100px;
   margin-bottom: 12px;
   text-align: left;
@@ -142,7 +151,31 @@ nav,
   transition: all 400ms;
 }
 
+.dark-theme .title,
+.dark-theme .section__title,
+.dark-theme .section__sub-title,
+.dark-theme .nav__link--anchor,
+.dark-theme .fa-circle-half-stroke,
+.dark-theme .header__para {
+  color: white;
+}
 
+.dark-theme section {
+  background-color: #242424;
+}
+
+.dark-theme #personal-logo {
+  filter: invert(1);
+}
+
+.dark-theme .scroll__icon {
+  border-color: white;
+}
+
+.dark-theme .scroll__icon:after,
+.dark-theme .link__hover-effect--black:after {
+  background-color: white;
+}
 
 /* 
 
@@ -227,7 +260,7 @@ LANDING PAGE
   width: 4px;
   height: 6px;
   border-radius: 2px;
-  animation: scroll 1000ms infinite;
+  animation: scroll 1000ms infinite linear;
 }
 
 @keyframes scroll {
@@ -296,7 +329,10 @@ nav {
   display: flex;
   visibility: hidden;
   z-index: -1;
-  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+  transition:
+    visibility 1s,
+    z-index 1s,
+    box-shadow 0.5s ease;
 }
 
 .modal--open .modal {
