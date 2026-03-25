@@ -11,10 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-#personal-logo {
-  height: 60px;
-  width: 60px;
-}
+
 
 li {
   list-style-type: none;
@@ -38,7 +35,7 @@ input,
 textarea {
   width: 100%;
   background-color: #242424;
-  color: white;
+  color: #fff;
   outline: none;
   border: 3px solid #c0c4cc;
   border-top: none;
@@ -185,6 +182,11 @@ nav,
   filter: invert(1)
 }
 
+#personal-logo {
+  height: 70px;
+  width: 70px;
+}
+
 /* 
 
 LANDING PAGE 
@@ -293,11 +295,12 @@ NAVIGATION
 
 nav {
   display: flex;
-  flex-direction: row;
   align-items: center;
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
+  margin: 0 auto;
+  height: 100px;
   padding: 0 20px;
 }
 
@@ -369,13 +372,13 @@ nav {
 }
 
 .modal__about {
-  background-color: rgb(245, 245, 245);
+  background-color: #f5f5f5;
   transform: translateX(-110%);
 }
 
 .modal__contact {
   background-color: #242424;
-  color: white;
+  color: #fff;
   transform: translateX(110%);
 }
 
@@ -601,6 +604,7 @@ nav {
 */
 
 footer {
+  position: relative;
   background-color: #242424;
   display: flex;
   padding: 6% 0;
